@@ -1,9 +1,28 @@
 #root {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 142px 24px 142px;
+  padding: 24px;
   background-color: var(--light-pink);
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 232px;
   background-image: url(./assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
+  background-size: cover;
+}
+
+@media (min-width: 648px) {
+  .bg-image {
+    height: 320px;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
 }

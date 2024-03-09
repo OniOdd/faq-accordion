@@ -4,7 +4,10 @@ import Accordion from './components/Accordion/Accordion.tsx';
 function App() {
 
   return (
-    <Accordion />
+    <>
+      <div className='bg-image'></div>
+      <Accordion />
+    </>
   );
 }
 
