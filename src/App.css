@@ -20,6 +20,10 @@
   background-size: cover;
 }
 
+.main {
+  z-index: 2;
+}
+
 @media (min-width: 648px) {
   .bg-image {
     height: 320px;

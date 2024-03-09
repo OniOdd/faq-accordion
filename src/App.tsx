@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <div className='bg-image'></div>
-      <Accordion />
+      <main className='main'>
+        <Accordion />
+      </main>
     </>
   );
 }
