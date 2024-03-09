@@ -1,12 +1,89 @@
-.accordion {}
-.accordion__title {}
-.accordion__header {}
-.accordion__icon {}
-.accordion__title {}
-.accordion__section {}
+.accordion {
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px 0 hsla(292, 16%, 49%, .23);
+}
+.accordion__header {
+  display: flex;
+  align-items: center;
+  column-gap: 23px;
+  margin-bottom: 24px;
+}
+.accordion__icon {
+  display: block;
+  width: 26px;
+  height: 25px;
+  margin-left: -1px;
+  background-image: url(../../assets/images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.accordion__title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--dark-purple);
+}
+.accordion__section:not(:last-child) {
+  margin-bottom: 19px;
+}
 
-.section {}
-.section__header {}
-.section__question {}
-.section__iconPlus {}
-.section__iconMinus {}
+.section:not(:last-child) {
+  padding-bottom: 19px;
+  border-bottom: 2px solid hsl(252, 56%, 98%);
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  cursor: pointer;
+}
+.section__header:not(:last-child) {
+  margin-bottom: 24px;
+}
+.section__header:focus .section__question,
+.section__header:hover .section__question {
+  color: hsl(281, 83%, 54%);
+}
+.section__question {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark-purple);
+  transition: color .2s;
+}
+.section__iconPlus,
+.section__iconMinus {
+  flex: 0 1 30px;
+  display: block;
+  width: 30px;
+  height: 31px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: background-image .3s;
+}
+.section__iconPlus {
+  background-image: url(../../assets/images/icon-plus.svg);
+}
+.section__iconMinus {
+  background-image: url(../../assets/images/icon-minus.svg);
+}
+.section__answer {
+  line-height: 1.5;
+  animation-name: appearsAnswer;
+  animation-duration: .6s;
+}
+
+@keyframes appearsAnswer {
+  from {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

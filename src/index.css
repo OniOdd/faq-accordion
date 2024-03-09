@@ -16,6 +16,7 @@ html {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   font: inherit;
   color: inherit;
 }
@@ -25,7 +26,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+  font-size: .874rem;
   line-height: 1.2;
   color: var(--grayish-purple);
 }

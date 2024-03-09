@@ -3,7 +3,7 @@ import data from './data.json';
 import { useState } from 'react';
 
 function Accordion() {
-  const [selected, setSelected] = useState<number[]>([]);
+  const [selected, setSelected] = useState<number[]>([1]);
 
   function handleSelection(id: number) {
     const choices = [...selected];
@@ -30,7 +30,8 @@ function Accordion() {
       </header>
       {
         data && data.length > 0 && data.map(item => (
-          <section className={`${style.accordion__section} ${style.section}`} key={item.id}>
+          <section className={`${style.accordion__section} ${style.section}`} key={item.id}
+                   aria-label='Click on the question to see the answer'>
             <header className={style.section__header} tabIndex={0} onKeyDown={event => keyDownHandler(event, item.id)}
                     onClick={() => handleSelection(item.id)}>
               <h2 className={style.section__question}>{item.question}</h2>

@@ -1,1 +1,9 @@
-
+#root {
+  min-height: 100vh;
+  padding: 142px 24px 142px;
+  background-color: var(--light-pink);
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
