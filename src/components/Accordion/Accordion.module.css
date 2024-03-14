@@ -42,7 +42,7 @@
 .section__header:not(:last-child) {
   margin-bottom: 24px;
 }
-.section__header:focus .section__question,
+.section__header:focus-visible .section__question,
 .section__header:hover .section__question {
   color: hsl(281, 83%, 54%);
 }
